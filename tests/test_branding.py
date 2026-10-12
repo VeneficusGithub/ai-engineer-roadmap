@@ -16,7 +16,7 @@ STAGES = [
     "multi-agent",
     "final-project",
 ]
-ALL_PAGES = ["", "setup/", *(f"stages/{stage}/" for stage in STAGES)]
+ALL_PAGES = ["", *(f"stages/{stage}/" for stage in STAGES)]
 
 # Stages are presented as equals: no labels or text ranking how urgent they are.
 URGENCY = re.compile(

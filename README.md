@@ -7,7 +7,6 @@ A self-study website for data science trainees preparing for a Junior AI Enginee
 All content is plain Markdown in [`docs/`](docs/), written in Dutch (technical terms and course titles stay in English):
 
 - [`docs/index.md`](docs/index.md): home page with the roadmap and the "why this site exists" text
-- [`docs/setup.md`](docs/setup.md): setup and costs
 - [`docs/stages/`](docs/stages/): one file per stage
 
 ### Add a resource or exercise

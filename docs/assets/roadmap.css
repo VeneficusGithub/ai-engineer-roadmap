@@ -479,7 +479,7 @@ body {
   background: transparent;
 }
 
-/* ---------- home: about + backup ---------- */
+/* ---------- home: about ---------- */
 
 .md-typeset .rm-about {
   max-width: 42rem;
@@ -524,47 +524,15 @@ body {
   font-weight: 700;
 }
 
-.md-typeset .rm-backup {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.2rem;
-  padding: 1.5rem 1.6rem;
-  margin-bottom: 2rem;
-  border-radius: var(--rm-radius);
-  background: var(--rm-surface);
-  border: 1px solid var(--rm-line);
-}
-
-.md-typeset .rm-backup h2 {
-  margin: 0 0 0.3rem;
-}
-
-.md-typeset .rm-backup p {
-  margin: 0;
-  font-size: 0.8rem;
-  color: var(--rm-muted);
-  max-width: 28rem;
-}
-
-.md-typeset .rm-backup .rm-backup-status:not(:empty) {
-  margin-top: 0.5rem;
-  color: var(--rm-ok);
-  font-weight: 600;
-}
-
-.rm-backup-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
 /* ---------- stage page: toolbar ---------- */
+
+:root {
+  --rm-toolbar-top: 3.2rem;
+}
 
 .md-typeset .rm-toolbar {
   position: sticky;
-  top: 3.2rem;
+  top: var(--rm-toolbar-top);
   z-index: 2;
   display: flex;
   flex-wrap: wrap;
@@ -578,6 +546,22 @@ body {
   border: 1px solid var(--rm-line);
   border-radius: var(--rm-radius);
   box-shadow: var(--rm-shadow);
+}
+
+/* Section jumps stop below the sticky toolbar instead of underneath it. The
+   heading's box grows upwards by the toolbar's height (without moving the text),
+   so the theme's own jump offset and its "current section" tracking, which both
+   measure the box top, still agree. The extra space overlaps the content above,
+   so it lets clicks through. */
+html.rm-has-toolbar .md-typeset h2[id] {
+  --rm-jump-space: calc(var(--rm-toolbar-height, 0px) + 0.4rem);
+  padding-top: var(--rm-jump-space);
+  margin-top: calc(2.4em - var(--rm-jump-space));
+  pointer-events: none;
+}
+
+html.rm-has-toolbar .md-typeset h2[id] > * {
+  pointer-events: auto;
 }
 
 .rm-toolbar-progress {
@@ -1001,8 +985,8 @@ html.rm-filter-review details.rm-q:not([data-rating="review"]) {
     align-items: center;
   }
 
-  .md-typeset .rm-toolbar {
-    top: 2.8rem;
+  :root {
+    --rm-toolbar-top: 2.8rem;
   }
 
   .rm-rating {

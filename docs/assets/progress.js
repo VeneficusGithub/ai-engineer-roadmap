@@ -11,7 +11,6 @@
   "use strict";
 
   const KEY = "ai-engineer-roadmap:v1";
-  const APP = "ai-engineer-roadmap";
 
   // ---------- state ----------
 
@@ -243,6 +242,16 @@
     toolbar.style.setProperty("--rm-progress", total ? done / total : 0);
   }
 
+  // The toolbar sticks below the site header, so jumping to a section must
+  // leave room for both. Its height changes when its buttons wrap.
+  function keepSectionsClearOf(toolbar) {
+    const root = document.documentElement;
+    root.classList.add("rm-has-toolbar");
+    const measure = () => root.style.setProperty("--rm-toolbar-height", `${toolbar.offsetHeight}px`);
+    measure();
+    if ("ResizeObserver" in window) new ResizeObserver(measure).observe(toolbar);
+  }
+
   function initStagePage(content) {
     stageContent = content;
     state.last = location.href.split("#")[0];
@@ -270,6 +279,7 @@
       el("div", { class: "rm-toolbar-actions" }, [routeToggle(), filter]),
     ]);
     (content.querySelector(".rm-meta") || content.querySelector("h1")).after(toolbar);
+    keepSectionsClearOf(toolbar);
 
     bindRouteToggles(updateStageToolbar);
     applyRoute();
@@ -321,54 +331,9 @@
     }
   }
 
-  function setStatus(message) {
-    const status = document.getElementById("rm-backup-status");
-    if (status) status.textContent = message;
-  }
-
-  function exportProgress() {
-    const payload = { app: APP, exportedAt: new Date().toISOString(), ...state };
-    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
-    const link = el("a", {
-      href: URL.createObjectURL(blob),
-      download: `${APP}-progress-${new Date().toISOString().slice(0, 10)}.json`,
-    });
-    document.body.append(link);
-    link.click();
-    link.remove();
-    setStatus("Back-up gedownload. Bewaar het bestand op een veilige plek.");
-  }
-
-  async function importProgress(file) {
-    try {
-      const imported = JSON.parse(await file.text());
-      if (!isValidState(imported)) throw new Error("not a progress file");
-      // Merge rather than replace, so importing never loses local progress.
-      state = {
-        ...state,
-        done: { ...state.done, ...imported.done },
-        ratings: { ...state.ratings, ...imported.ratings },
-        route: imported.route === "refresh" ? "refresh" : state.route,
-        last: imported.last || state.last,
-      };
-      saveState();
-      applyRoute();
-      await renderHome();
-      setStatus("Voortgang geïmporteerd. Welkom terug!");
-    } catch {
-      setStatus("Dit bestand lijkt geen voortgangsback-up van deze site te zijn.");
-    }
-  }
-
   function initHomePage() {
     bindRouteToggles(renderHome);
     applyRoute();
-    document.getElementById("rm-export").addEventListener("click", exportProgress);
-    const input = document.getElementById("rm-import");
-    input.addEventListener("change", async () => {
-      if (input.files.length) await importProgress(input.files[0]);
-      input.value = "";
-    });
     renderHome();
   }
 

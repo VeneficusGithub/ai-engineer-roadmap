@@ -115,22 +115,10 @@ Na een sollicitatiegesprek voor een rol als Junior AI Engineer werd duidelijk da
 1. **Kies een route.** De *volledige route* behandelt elk onderwerp in ongeveer 25–30 uur. *Opfrissen* laat alleen de essentie zien, ongeveer een halve dag, voor vlak voor een interview.
 2. **Werk de fases op volgorde door.** Elke fase laat zien wat je moet leren, oefeningen om mee te oefenen en optionele bronnen om je te verdiepen. Vink items af terwijl je bezig bent.
 3. **Oefen de interviewvragen.** Probeer eerst hardop te antwoorden en klap dan het antwoord open. Markeer elke vraag als *kon ik beantwoorden* of *nog herhalen*, en gebruik het filter om terug te gaan naar de vragen die je lastig vindt.
-4. **Maak een back-up van je voortgang.** Je voortgang staat alleen in deze browser. Gebruik af en toe *exporteren* hieronder, en *importeren* op een andere laptop om daar verder te gaan.
 
 </div>
 
-Cursussen op Udemy en DataCamp vallen onder de abonnementen van het traineeship. Sommige oefeningen roepen een LLM aan vanuit code; lees [Setup en kosten](setup.md) voordat je daaraan begint.
+Cursussen op Udemy en DataCamp vallen onder de abonnementen van het traineeship.
 
 </section>
 
-<section class="rm-backup" aria-label="Back-up van je voortgang">
-  <div>
-    <h2>Jouw voortgang</h2>
-    <p>Alleen opgeslagen in deze browser. Exporteer een back-upbestand om je voortgang veilig te bewaren of mee te nemen naar een andere laptop.</p>
-    <p class="rm-backup-status" id="rm-backup-status" role="status"></p>
-  </div>
-  <div class="rm-backup-actions">
-    <button type="button" class="rm-button" id="rm-export">Voortgang exporteren</button>
-    <label class="rm-button rm-button--ghost">Voortgang importeren<input type="file" id="rm-import" accept="application/json,.json"></label>
-  </div>
-</section>

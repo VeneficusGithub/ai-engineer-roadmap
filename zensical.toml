@@ -5,7 +5,6 @@ site_description = "Van data trainee naar Junior AI Engineer: wat je moet leren,
 
 nav = [
   { "Roadmap" = "index.md" },
-  { "Setup en kosten" = "setup.md" },
   { "Fases" = [
     "stages/llm-foundations.md",
     "stages/agents.md",

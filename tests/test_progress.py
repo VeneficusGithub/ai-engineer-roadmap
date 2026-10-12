@@ -1,7 +1,6 @@
 """Progress tracking: everything a trainee does is kept in their own browser."""
 
 import re
-from pathlib import Path
 
 from playwright.sync_api import Page, expect
 
@@ -76,21 +75,3 @@ def test_continue_button_links_to_last_visited_stage(page: Page) -> None:
     expect(page.locator("#rm-continue")).to_have_attribute(
         "href", re.compile(re.escape(STAGE) + "$")
     )
-
-
-def test_export_then_import_restores_progress(page: Page, tmp_path: Path) -> None:
-    page.goto(STAGE)
-    _, selector = first_item(page)
-    page.locator(selector).check()
-    page.goto("")
-    with page.expect_download() as download_info:
-        page.locator("#rm-export").click()
-    backup = tmp_path / "progress.json"
-    download_info.value.save_as(backup)
-
-    page.evaluate("localStorage.clear()")
-    page.reload()
-    page.locator("#rm-import").set_input_files(backup)
-    expect(page.locator("#rm-backup-status")).to_contain_text("geïmporteerd")
-    page.goto(STAGE)
-    expect(page.locator(selector)).to_be_checked()
