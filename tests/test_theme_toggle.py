@@ -1,6 +1,5 @@
 """The theme button switches between light and dark with a single click."""
 
-import json
 from collections.abc import Callable
 
 import pytest
@@ -51,39 +50,7 @@ def test_one_click_switches_theme_and_the_choice_is_kept(
     expect(page.locator("body")).to_have_attribute("data-md-color-scheme", LIGHT)
 
 
-def stored(index: int, media: str, scheme: str) -> str:
-    color = {"media": media, "scheme": scheme, "primary": "custom", "accent": "custom"}
-    return json.dumps({"index": index, "color": color})
-
-
-# Choices saved by the old three-setting button: 0 = system, 1 = light, 2 = dark.
-OLD_CHOICES = [
-    (
-        "old light choice",
-        stored(1, "(prefers-color-scheme: light)", LIGHT),
-        "dark",
-        LIGHT,
-    ),
-    ("old dark choice", stored(2, "(prefers-color-scheme: dark)", DARK), "light", DARK),
-    ("old system choice", stored(0, "(prefers-color-scheme)", LIGHT), "dark", DARK),
-]
-
-
-@pytest.mark.parametrize(
-    ("value", "os_scheme", "expected"),
-    [case[1:] for case in OLD_CHOICES],
-    ids=[case[0] for case in OLD_CHOICES],
-)
-def test_choice_saved_by_the_old_button_is_kept(
-    page_with_scheme: Callable[[Scheme], Page],
-    value: str,
-    os_scheme: Scheme,
-    expected: str,
-) -> None:
-    page = page_with_scheme(os_scheme)
+def test_pages_load_no_extra_theme_script(page: Page) -> None:
+    """The theme needs no help from our own scripts to remember a choice."""
     page.goto("")
-    key = page.evaluate("__md_scope.pathname") + ".__palette"
-    page.evaluate("([key, value]) => localStorage.setItem(key, value)", [key, value])
-    page.reload()
-    settled(page)
-    assert scheme_of(page) == expected
+    expect(page.locator('head script[src*="theme-choice"]')).to_have_count(0)
