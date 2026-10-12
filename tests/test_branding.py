@@ -40,6 +40,16 @@ def test_hero_says_data_trainee_to_ai_engineer(page: Page) -> None:
     )
 
 
+def test_hero_text_offers_preparation_next_to_the_programme(page: Page) -> None:
+    page.goto("")
+    expect(page.locator(".rm-hero-text")).to_have_text(
+        "Deze pagina biedt naast het trainingsprogramma extra voorbereiding voor "
+        "een rol als AI engineer: wat je moet leren, waar je het leert en welke "
+        "interviewvragen je kunt oefenen. Je voortgang wordt in deze browser "
+        "opgeslagen."
+    )
+
+
 @pytest.mark.parametrize("path", ALL_PAGES)
 def test_no_urgency_wording(page: Page, path: str) -> None:
     page.goto(path)

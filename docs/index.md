@@ -8,7 +8,7 @@ hide:
 <section class="rm-hero">
   <p class="rm-eyebrow">Voor data trainees</p>
   <h1 class="rm-hero-title">Van Data Trainee <br>naar <em>AI Engineer</em></h1>
-  <p class="rm-hero-text">De onderwerpen waar vacatures voor Junior AI Engineer om vragen en die het traineeship nog niet behandelt: wat je moet leren, waar je het leert en welke interviewvragen je kunt oefenen. Je voortgang wordt in deze browser opgeslagen.</p>
+  <p class="rm-hero-text">Deze pagina biedt naast het trainingsprogramma extra voorbereiding voor een rol als AI engineer: wat je moet leren, waar je het leert en welke interviewvragen je kunt oefenen. Je voortgang wordt in deze browser opgeslagen.</p>
 
   <div class="rm-hero-actions">
     <a id="rm-continue" class="rm-button rm-button--primary" href="stages/llm-foundations/">Begin bij fase 1</a>
