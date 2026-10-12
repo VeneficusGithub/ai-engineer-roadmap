@@ -23,6 +23,7 @@ extra_javascript = ["assets/progress.js"]
 
 [project.theme]
 language = "nl"
+custom_dir = "overrides"
 features = [
   "content.code.copy",
   "content.tooltips",
@@ -42,13 +43,6 @@ text = "Inter"
 code = "JetBrains Mono"
 
 [[project.theme.palette]]
-media = "(prefers-color-scheme)"
-primary = "custom"
-accent = "custom"
-toggle.icon = "lucide/sun-moon"
-toggle.name = "Naar licht thema"
-
-[[project.theme.palette]]
 media = "(prefers-color-scheme: light)"
 scheme = "default"
 primary = "custom"
@@ -62,7 +56,7 @@ scheme = "slate"
 primary = "custom"
 accent = "custom"
 toggle.icon = "lucide/moon"
-toggle.name = "Naar systeeminstelling"
+toggle.name = "Naar licht thema"
 
 [project.markdown_extensions]
 admonition = {}
