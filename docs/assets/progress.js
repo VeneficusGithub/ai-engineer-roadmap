@@ -279,11 +279,14 @@
       el("div", { class: "rm-toolbar-actions" }, [routeToggle(), filter]),
     ]);
     (content.querySelector(".rm-meta") || content.querySelector("h1")).after(toolbar);
-    keepSectionsClearOf(toolbar);
 
     bindRouteToggles(updateStageToolbar);
     applyRoute();
     updateStageToolbar();
+    // Measure only once the toolbar is filled in: the theme records where each
+    // section starts and only re-measures when the page height changes, which
+    // a later change in toolbar height alone does not cause.
+    keepSectionsClearOf(toolbar);
   }
 
   // ---------- home page ----------

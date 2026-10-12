@@ -1,14 +1,14 @@
 """The theme button switches between light and dark with a single click."""
 
 import json
-from typing import Literal
+from collections.abc import Callable
 
 import pytest
-from playwright.sync_api import Browser, Page, expect
+from conftest import Scheme
+from playwright.sync_api import Page, expect
 
 LIGHT, DARK = "default", "slate"
 TOGGLE = 'form[data-md-component="palette"] label:not([hidden])'
-Scheme = Literal["light", "dark"]
 
 
 def scheme_of(page: Page) -> str | None:
@@ -21,11 +21,6 @@ def settled(page: Page) -> None:
     page.wait_for_timeout(500)
 
 
-def new_page(browser: Browser, base_url: str, os_scheme: Scheme) -> Page:
-    context = browser.new_context(base_url=base_url, color_scheme=os_scheme)
-    return context.new_page()
-
-
 def test_toggle_has_two_settings(page: Page) -> None:
     page.goto("")
     expect(page.locator('form[data-md-component="palette"] input')).to_have_count(2)
@@ -33,18 +28,18 @@ def test_toggle_has_two_settings(page: Page) -> None:
 
 @pytest.mark.parametrize(("os_scheme", "start"), [("light", LIGHT), ("dark", DARK)])
 def test_first_visit_follows_the_computer_setting(
-    browser: Browser, base_url: str, os_scheme: Scheme, start: str
+    page_with_scheme: Callable[[Scheme], Page], os_scheme: Scheme, start: str
 ) -> None:
-    page = new_page(browser, base_url, os_scheme)
+    page = page_with_scheme(os_scheme)
     page.goto("")
     settled(page)
     assert scheme_of(page) == start
 
 
 def test_one_click_switches_theme_and_the_choice_is_kept(
-    browser: Browser, base_url: str
+    page_with_scheme: Callable[[Scheme], Page],
 ) -> None:
-    page = new_page(browser, base_url, "light")
+    page = page_with_scheme("light")
     page.goto("")
     settled(page)
     page.locator(TOGGLE).click()
@@ -80,9 +75,12 @@ OLD_CHOICES = [
     ids=[case[0] for case in OLD_CHOICES],
 )
 def test_choice_saved_by_the_old_button_is_kept(
-    browser: Browser, base_url: str, value: str, os_scheme: Scheme, expected: str
+    page_with_scheme: Callable[[Scheme], Page],
+    value: str,
+    os_scheme: Scheme,
+    expected: str,
 ) -> None:
-    page = new_page(browser, base_url, os_scheme)
+    page = page_with_scheme(os_scheme)
     page.goto("")
     key = page.evaluate("__md_scope.pathname") + ".__palette"
     page.evaluate("([key, value]) => localStorage.setItem(key, value)", [key, value])
