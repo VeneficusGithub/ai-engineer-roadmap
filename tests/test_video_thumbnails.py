@@ -76,8 +76,20 @@ def test_security_has_a_refresh_video_from_the_start(page: Page) -> None:
     expect(video.locator("img.rm-thumb-img")).to_be_visible()
 
 
+def test_agents_has_a_refresh_video_from_the_start(page: Page) -> None:
+    page.goto("stages/agents/")
+    video = page.locator('a.rm-item[href*="EDb37y_MhRw"]')
+    expect(video).to_have_count(1)
+    expect(video).to_have_attribute(
+        "href", "https://www.youtube.com/watch?v=EDb37y_MhRw"
+    )
+    expect(video).to_have_class("rm-item rm-refresh")
+    expect(video.locator("img.rm-thumb-img")).to_be_visible()
+
+
 @pytest.mark.parametrize(
-    "stage", ["llm-foundations", "mcp-skills", "rag", "evaluation", "security"]
+    "stage",
+    ["llm-foundations", "agents", "mcp-skills", "rag", "evaluation", "security"],
 )
 def test_stage_no_longer_asks_for_a_refresh_video(page: Page, stage: str) -> None:
     page.goto(f"stages/{stage}/")

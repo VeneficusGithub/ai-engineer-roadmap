@@ -18,12 +18,10 @@ description: Laat een LLM in een loop zelf bepalen welke tools het aanroept, tot
 
 ## Leren
 
+- [Generative vs Agentic AI: Shaping the Future of AI Collaboration](https://www.youtube.com/watch?v=EDb37y_MhRw){ .rm-item .rm-refresh data-source="Video · IBM Technology" data-time="7 min" } Het verschil tussen generatieve AI, die antwoord geeft op een vraag, en agentic AI, die zelfstandig stappen zet en tools gebruikt om een doel te bereiken.
 - [Introduction to AI Agents](https://www.datacamp.com/courses/introduction-to-ai-agents){ .rm-item data-source="Cursus · DataCamp" data-time="1 uur 30 min" } Een conceptuele introductie zonder code: de basis van agents, ontwerppatronen en architecturen, en hoe je agents verantwoord inzet.
 - [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents){ .rm-item .rm-refresh data-source="Artikel · Anthropic" data-time="25 min" } De helderste uitleg van workflows tegenover agents, met de gangbare patronen bij naam genoemd.
 - [Designing Agentic Systems with LangChain](https://www.datacamp.com/courses/designing-agentic-systems-with-langchain){ .rm-item data-source="Cursus · DataCamp" data-time="Ongeveer 1 uur, hoofdstuk 1" } Doe hoofdstuk 1, "The Essentials of LangChain agents": tool calling en ReAct-agents met praktische oefeningen. Draait zonder API-sleutel.
-
-!!! todo "Opfrisvideo nog te kiezen"
-    Kies een korte uitlegvideo over agents voor de opfrisroute van een halve dag.
 
 ## Interviewvragen
 

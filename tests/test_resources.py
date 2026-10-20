@@ -40,6 +40,7 @@ EXPECTED: dict[str, dict[str, object]] = {
                 True,
             ),
             (DC + "designing-agentic-systems-with-langchain", False, False),
+            ("https://www.youtube.com/watch?v=EDb37y_MhRw", False, True),
         ],
     },
     "evaluation": {
