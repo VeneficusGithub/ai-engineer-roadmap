@@ -1,9 +1,8 @@
-"""The site knows its own address and links to its repository."""
+"""The site knows its own address."""
 
 from playwright.sync_api import Page, expect
 
 SITE_URL = "https://veneficusgithub.github.io/ai-engineer-roadmap/"
-REPO_URL = "https://github.com/VeneficusGithub/ai-engineer-roadmap"
 
 
 def test_pages_name_their_address_on_the_live_site(page: Page) -> None:
@@ -15,6 +14,7 @@ def test_pages_name_their_address_on_the_live_site(page: Page) -> None:
     )
 
 
-def test_header_links_to_the_repository(page: Page) -> None:
+def test_header_has_no_repository_link(page: Page) -> None:
     page.goto("")
-    expect(page.locator(".md-header a.md-source")).to_have_attribute("href", REPO_URL)
+    expect(page.locator(".md-header a.md-source")).to_have_count(0)
+    expect(page.locator('a[href*="github.com"]')).to_have_count(0)
