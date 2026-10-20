@@ -1,7 +1,8 @@
 [project]
 site_name = "AI Engineer Roadmap"
 site_description = "Van data trainee naar Junior AI Engineer: wat je moet leren, waar je het leert en welke interviewvragen je kunt oefenen."
-# site_url and repo_url are filled in once the repository lives in its final GitHub account.
+site_url = "https://veneficusgithub.github.io/ai-engineer-roadmap/"
+repo_url = "https://github.com/VeneficusGithub/ai-engineer-roadmap"
 
 nav = [
   { "Roadmap" = "index.md" },
