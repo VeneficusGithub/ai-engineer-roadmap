@@ -9,17 +9,18 @@ description: Laat een LLM vragen over je eigen documenten beantwoorden door eers
 
 <div class="rm-meta" markdown>
 <span>Fase 4 van 9</span>
-<span>Ongeveer 2 uur</span>
+<span>Ongeveer 4 uur</span>
 <span>Bouwt voort op: LLM-basiskennis</span>
 </div>
 
 !!! curating "Deze fase is nog niet compleet"
-    Er ontbreekt nog materiaal over vectordatabases, chunking, retrieval en RAG-evaluatie.
+    Er ontbreekt nog materiaal over vectordatabases en RAG-evaluatie.
 
 ## Leren
 
 - [What is Retrieval-Augmented Generation (RAG)?](https://www.youtube.com/watch?v=T-D1OfcDW1M){ .rm-item .rm-refresh data-source="Video · IBM Technology" data-time="7 min" } Een korte uitleg van waarom een LLM zonder RAG verouderde of verzonnen antwoorden geeft, en hoe ophalen uit je eigen bronnen dat oplost.
 - [Retrieval Augmented Generation (RAG) with LangChain](https://www.datacamp.com/courses/retrieval-augmented-generation-rag-with-langchain){ .rm-item data-source="Cursus · DataCamp" data-time="Ongeveer 2 uur, hoofdstuk 1–2" } Bouw een RAG-toepassing met LangChain en verbeter daarna de architectuur. Hoofdstuk 3 (Graph RAG) kun je overslaan. Draait zonder API-sleutel.
+- [Building with the Claude API: RAG and Agentic Search](https://anthropic.skilljar.com/claude-with-the-anthropic-api/287763){ .rm-item data-source="Cursusmodule · Anthropic Academy" data-time="Ongeveer 2 uur" } Chunkingstrategieën, embeddings, de volledige RAG-flow, zoeken op trefwoorden met BM25 en een pipeline met meerdere indexen. Vereist een API-sleutel. Anthropic heeft geen eigen embeddingmodel, dus daarvoor gebruik je een andere aanbieder of een gratis model op je eigen laptop.
 
 ## Interviewvragen
 

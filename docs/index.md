@@ -13,7 +13,7 @@ hide:
   <div class="rm-hero-actions">
     <a id="rm-continue" class="rm-button rm-button--primary" href="stages/llm-foundations/">Begin bij fase 1</a>
     <div class="rm-route-toggle" role="group" aria-label="Kies een route">
-      <button type="button" data-route="full" aria-pressed="true">Volledige route <span>25–30 uur</span></button>
+      <button type="button" data-route="full" aria-pressed="true">Volledige route <span>35–40 uur</span></button>
       <button type="button" data-route="refresh" aria-pressed="false">Opfrissen <span>halve dag</span></button>
     </div>
   </div>
@@ -40,7 +40,7 @@ hide:
       <span class="rm-stage-title">Agents en tool calling</span>
       <span class="rm-stage-text">Laat het model in een loop zelf tools kiezen, en weet wanneer een vaste workflow beter is.</span>
     </span>
-    <span class="rm-stage-side"><span class="rm-stage-hours">3 uur</span><span class="rm-stage-progress">–</span></span>
+    <span class="rm-stage-side"><span class="rm-stage-hours">6 uur</span><span class="rm-stage-progress">–</span></span>
   </a>
   <a class="rm-stage-card" href="stages/mcp-skills/" data-stage="stages/mcp-skills/">
     <span class="rm-stage-number">03</span>
@@ -48,7 +48,7 @@ hide:
       <span class="rm-stage-title">MCP en skills</span>
       <span class="rm-stage-text">Standaardmanieren om tools, data en instructies aan elke agent te koppelen.</span>
     </span>
-    <span class="rm-stage-side"><span class="rm-stage-hours">5,5 uur</span><span class="rm-stage-progress">–</span></span>
+    <span class="rm-stage-side"><span class="rm-stage-hours">9,5 uur</span><span class="rm-stage-progress">–</span></span>
   </a>
   <a class="rm-stage-card" href="stages/rag/" data-stage="stages/rag/">
     <span class="rm-stage-number">04</span>
@@ -56,7 +56,7 @@ hide:
       <span class="rm-stage-title">RAG en vectordatabases</span>
       <span class="rm-stage-text">Vragen over je eigen documenten beantwoorden door eerst de juiste passages op te halen.</span>
     </span>
-    <span class="rm-stage-side"><span class="rm-stage-hours">2 uur</span><span class="rm-stage-progress">–</span></span>
+    <span class="rm-stage-side"><span class="rm-stage-hours">4 uur</span><span class="rm-stage-progress">–</span></span>
   </a>
   <a class="rm-stage-card" href="stages/multi-agent/" data-stage="stages/multi-agent/">
     <span class="rm-stage-number">05</span>
@@ -64,7 +64,7 @@ hide:
       <span class="rm-stage-title">Multi-agent systemen</span>
       <span class="rm-stage-text">Meerdere agents die samenwerken, en waarom dat vaak niet het antwoord is.</span>
     </span>
-    <span class="rm-stage-side"><span class="rm-stage-hours">10 min</span><span class="rm-stage-progress">–</span></span>
+    <span class="rm-stage-side"><span class="rm-stage-hours">1 uur</span><span class="rm-stage-progress">–</span></span>
   </a>
   <a class="rm-stage-card" href="stages/evaluation/" data-stage="stages/evaluation/">
     <span class="rm-stage-number">06</span>
@@ -72,7 +72,7 @@ hide:
       <span class="rm-stage-title">Evaluatie en observability</span>
       <span class="rm-stage-text">Van "het zag er goed uit" naar cijfers, en zien wat er in productie gebeurt.</span>
     </span>
-    <span class="rm-stage-side"><span class="rm-stage-hours">3,5 uur</span><span class="rm-stage-progress">–</span></span>
+    <span class="rm-stage-side"><span class="rm-stage-hours">4,5 uur</span><span class="rm-stage-progress">–</span></span>
   </a>
   <a class="rm-stage-card" href="stages/security/" data-stage="stages/security/">
     <span class="rm-stage-number">07</span>
@@ -112,7 +112,7 @@ Na een sollicitatiegesprek voor een rol als Junior AI Engineer werd duidelijk da
 
 <div class="rm-steps" markdown>
 
-1. **Kies een route.** De *volledige route* behandelt elk onderwerp in ongeveer 25–30 uur. *Opfrissen* laat alleen de essentie zien, ongeveer een halve dag, voor vlak voor een interview.
+1. **Kies een route.** De *volledige route* behandelt elk onderwerp in ongeveer 35–40 uur. *Opfrissen* laat alleen de essentie zien, ongeveer een halve dag, voor vlak voor een interview.
 2. **Werk de fases op volgorde door.** Elke fase laat zien wat je moet leren, oefeningen om mee te oefenen en optionele bronnen om je te verdiepen. Vink items af terwijl je bezig bent.
 3. **Oefen de interviewvragen.** Probeer eerst hardop te antwoorden en klap dan het antwoord open. Markeer elke vraag als *kon ik beantwoorden* of *nog herhalen*, en gebruik het filter om terug te gaan naar de vragen die je lastig vindt.
 

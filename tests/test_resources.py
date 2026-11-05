@@ -12,6 +12,8 @@ import pytest
 from playwright.sync_api import Page, expect
 
 DC = "https://www.datacamp.com/courses/"
+ACADEMY = "https://anthropic.skilljar.com/"
+CLAUDE_API = ACADEMY + "claude-with-the-anthropic-api/"
 TO_BE_DECIDED = "n.t.b."
 
 EXPECTED: dict[str, dict[str, object]] = {
@@ -24,14 +26,15 @@ EXPECTED: dict[str, dict[str, object]] = {
         ],
     },
     "rag": {
-        "hours": "2 uur",
+        "hours": "4 uur",
         "items": [
             (DC + "retrieval-augmented-generation-rag-with-langchain", False, False),
             ("https://www.youtube.com/watch?v=T-D1OfcDW1M", False, True),
+            (CLAUDE_API + "287763", False, False),
         ],
     },
     "agents": {
-        "hours": "3 uur",
+        "hours": "6 uur",
         "items": [
             (DC + "introduction-to-ai-agents", False, False),
             (
@@ -41,10 +44,12 @@ EXPECTED: dict[str, dict[str, object]] = {
             ),
             (DC + "designing-agentic-systems-with-langchain", False, False),
             ("https://www.youtube.com/watch?v=EDb37y_MhRw", False, True),
+            (CLAUDE_API + "287747", False, False),
+            (CLAUDE_API + "287796", False, False),
         ],
     },
     "evaluation": {
-        "hours": "3,5 uur",
+        "hours": "4,5 uur",
         "items": [
             (DC + "llm-application-evaluation-with-langsmith", False, False),
             (
@@ -53,6 +58,7 @@ EXPECTED: dict[str, dict[str, object]] = {
                 False,
             ),
             ("https://www.youtube.com/watch?v=-sL7QzDFW-4", False, True),
+            (CLAUDE_API + "287731", False, False),
         ],
     },
     "deployment": {
@@ -75,17 +81,29 @@ EXPECTED: dict[str, dict[str, object]] = {
         ],
     },
     "mcp-skills": {
-        "hours": "5,5 uur",
+        "hours": "9,5 uur",
         "items": [
             (DC + "introduction-to-model-context-protocol-mcp", False, False),
             ("https://pamelafox.github.io/github-copilot-mcp-tutorial/", True, False),
             ("https://www.youtube.com/watch?v=6wdvSH61xGw&t=48s", False, True),
+            (CLAUDE_API + "287780", False, False),
+            (
+                "https://www.deeplearning.ai/courses/agent-skills-with-anthropic",
+                False,
+                False,
+            ),
         ],
     },
     "multi-agent": {
-        "hours": "10 min",
+        "hours": "1 uur",
         "items": [
             ("https://www.youtube.com/watch?v=sWH0T4Zez6I", False, True),
+            (
+                "https://www.anthropic.com/engineering/multi-agent-research-system",
+                False,
+                False,
+            ),
+            (ACADEMY + "introduction-to-subagents", False, False),
         ],
     },
 }

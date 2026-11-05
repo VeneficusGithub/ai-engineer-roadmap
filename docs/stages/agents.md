@@ -9,12 +9,12 @@ description: Laat een LLM in een loop zelf bepalen welke tools het aanroept, tot
 
 <div class="rm-meta" markdown>
 <span>Fase 2 van 9</span>
-<span>Ongeveer 3 uur</span>
+<span>Ongeveer 6 uur</span>
 <span>Bouwt voort op: LLM-basiskennis</span>
 </div>
 
 !!! curating "Deze fase is nog niet compleet"
-    Er ontbreekt nog materiaal over tool calling in code en over agent-frameworks.
+    Er ontbreekt nog materiaal over agent-frameworks.
 
 ## Leren
 
@@ -22,6 +22,8 @@ description: Laat een LLM in een loop zelf bepalen welke tools het aanroept, tot
 - [Introduction to AI Agents](https://www.datacamp.com/courses/introduction-to-ai-agents){ .rm-item data-source="Cursus · DataCamp" data-time="1 uur 30 min" } Een conceptuele introductie zonder code: de basis van agents, ontwerppatronen en architecturen, en hoe je agents verantwoord inzet.
 - [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents){ .rm-item .rm-refresh data-source="Artikel · Anthropic" data-time="25 min" } De helderste uitleg van workflows tegenover agents, met de gangbare patronen bij naam genoemd.
 - [Designing Agentic Systems with LangChain](https://www.datacamp.com/courses/designing-agentic-systems-with-langchain){ .rm-item data-source="Cursus · DataCamp" data-time="Ongeveer 1 uur, hoofdstuk 1" } Doe hoofdstuk 1, "The Essentials of LangChain agents": tool calling en ReAct-agents met praktische oefeningen. Draait zonder API-sleutel.
+- [Building with the Claude API: Tool use with Claude](https://anthropic.skilljar.com/claude-with-the-anthropic-api/287747){ .rm-item data-source="Cursusmodule · Anthropic Academy" data-time="Ongeveer 2 uur" } Tool calling in je eigen Python-code: toolfuncties, schema's, gesprekken over meerdere beurten en meerdere tools tegelijk. De cursus is gratis, maar je hebt een API-sleutel nodig; de module "Accessing Claude with the API" laat zien hoe je die aanmaakt en gebruikt.
+- [Building with the Claude API: Agents and workflows](https://anthropic.skilljar.com/claude-with-the-anthropic-api/287796){ .rm-item data-source="Cursusmodule · Anthropic Academy" data-time="Ongeveer 1 uur" } Chaining, routing en parallelisatie, en wanneer je kiest voor een vaste workflow in plaats van een agent. Vereist een API-sleutel.
 
 ## Interviewvragen
 
