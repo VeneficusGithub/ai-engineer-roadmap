@@ -61,13 +61,6 @@ EXPECTED: dict[str, dict[str, object]] = {
             (CLAUDE_API + "287731", False, False),
         ],
     },
-    "deployment": {
-        "hours": "4,5 uur",
-        "items": [
-            (DC + "deploying-ai-into-production-with-fastapi", False, False),
-            ("https://www.udemy.com/course/mastering-aiml-with-docker/", False, False),
-        ],
-    },
     "security": {
         "hours": "3 uur",
         "items": [

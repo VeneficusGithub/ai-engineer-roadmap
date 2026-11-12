@@ -8,7 +8,7 @@ description: Meerdere agents die samenwerken, en waarom dat vaak niet het antwoo
 <p class="rm-lede">Multi-agent systemen verdelen een taak over meerdere gespecialiseerde agents. Ze kunnen grote, parallelle onderzoekstaken aan, maar vermenigvuldigen ook de kosten en het aantal plekken waar het mis kan gaan. Interviewers willen vooral horen dat je weet wanneer je ze <em>niet</em> moet gebruiken.</p>
 
 <div class="rm-meta" markdown>
-<span>Fase 5 van 9</span>
+<span>Fase 5 van 8</span>
 <span>Ongeveer 1 uur</span>
 <span>Bouwt voort op: agents</span>
 </div>

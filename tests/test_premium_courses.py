@@ -77,5 +77,5 @@ def test_multi_agent_stage_has_no_open_gaps_left(page: Page) -> None:
 
 def test_home_page_gives_the_new_length_of_the_full_route(page: Page) -> None:
     page.goto("")
-    expect(page.locator('[data-route="full"] span')).to_have_text("35–40 uur")
-    expect(page.locator(".rm-steps")).to_contain_text("ongeveer 35–40 uur")
+    expect(page.locator('[data-route="full"] span')).to_have_text("30–35 uur")
+    expect(page.locator(".rm-steps")).to_contain_text("ongeveer 30–35 uur")

@@ -8,7 +8,7 @@ description: Hoe LLM-applicaties worden aangevallen, en hoe je de schade beperkt
 <p class="rm-lede">Het traineeship behandelde security in het algemeen. LLM's brengen nieuwe problemen mee: tekst in een document kan een instructie worden, en een model kan lekken wat het te zien kreeg. Deze fase behandelt de risico's die interviewers je verwachten te kunnen noemen.</p>
 
 <div class="rm-meta" markdown>
-<span>Fase 7 van 9</span>
+<span>Fase 7 van 8</span>
 <span>Ongeveer 3 uur</span>
 <span>Bouwt voort op: de securitymodule van het traineeship</span>
 </div>

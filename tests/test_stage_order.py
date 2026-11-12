@@ -13,7 +13,6 @@ ORDER = [
     "multi-agent",
     "evaluation",
     "security",
-    "deployment",
     "final-project",
 ]
 
@@ -40,7 +39,9 @@ def test_navigation_follows_the_order(page: Page) -> None:
 def test_stage_page_shows_its_position(page: Page, stage: str) -> None:
     page.goto(f"stages/{stage}/")
     position = ORDER.index(stage) + 1
-    expect(page.locator(".rm-meta")).to_contain_text(f"Fase {position} van 9")
+    expect(page.locator(".rm-meta")).to_contain_text(
+        f"Fase {position} van {len(ORDER)}"
+    )
 
 
 # How each stage is named when another page says it builds on it.
@@ -52,7 +53,6 @@ STAGE_NAMES = {
     "multi-agent": r"\bmulti-agent\b",
     "evaluation": r"\bevaluatie\b",
     "security": r"\bLLM-security\b",
-    "deployment": r"\b(?:Docker|deployment)\b",
 }
 
 

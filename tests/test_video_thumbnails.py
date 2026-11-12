@@ -14,7 +14,6 @@ STAGES = [
     "multi-agent",
     "evaluation",
     "security",
-    "deployment",
     "final-project",
 ]
 YOUTUBE = 'a.rm-item[href*="youtube.com/watch"]'

@@ -8,7 +8,7 @@ description: Eén project dat de fases samenbrengt, en iets om te laten zien in 
 <p class="rm-lede">Een project dat je van begin tot eind bouwt en kunt demonstreren in een interview. Het brengt samen wat je in de eerdere fases hebt geoefend.</p>
 
 <div class="rm-meta" markdown>
-<span>Fase 9 van 9</span>
+<span>Fase 8 van 8</span>
 <span>Tijd nog te bepalen</span>
 <span>Bouwt voort op: alle fases</span>
 </div>
@@ -20,6 +20,5 @@ description: Eén project dat de fases samenbrengt, en iets om te laten zien in 
     - ophalen uit een echte set documenten (RAG)
     - minstens één tool die het model kan aanroepen
     - een kleine evaluatieset met scores
-    - aangeboden als API en verpakt in Docker
 
     Voeg een checklist toe waarmee trainees zelf kunnen beoordelen wanneer ze klaar zijn.

@@ -8,7 +8,7 @@ description: Laat een LLM vragen over je eigen documenten beantwoorden door eers
 <p class="rm-lede">Met retrieval-augmented generation laat je een LLM vragen over je eigen documenten beantwoorden. In plaats van te hopen dat het model het antwoord weet, doorzoek je eerst je eigen documenten en geef je het model de relevante passages om op te antwoorden.</p>
 
 <div class="rm-meta" markdown>
-<span>Fase 4 van 9</span>
+<span>Fase 4 van 8</span>
 <span>Ongeveer 4 uur</span>
 <span>Bouwt voort op: LLM-basiskennis</span>
 </div>

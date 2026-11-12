@@ -13,7 +13,7 @@ hide:
   <div class="rm-hero-actions">
     <a id="rm-continue" class="rm-button rm-button--primary" href="stages/llm-foundations/">Begin bij fase 1</a>
     <div class="rm-route-toggle" role="group" aria-label="Kies een route">
-      <button type="button" data-route="full" aria-pressed="true">Volledige route <span>35–40 uur</span></button>
+      <button type="button" data-route="full" aria-pressed="true">Volledige route <span>30–35 uur</span></button>
       <button type="button" data-route="refresh" aria-pressed="false">Opfrissen <span>halve dag</span></button>
     </div>
   </div>
@@ -82,16 +82,8 @@ hide:
     </span>
     <span class="rm-stage-side"><span class="rm-stage-hours">3 uur</span><span class="rm-stage-progress">–</span></span>
   </a>
-  <a class="rm-stage-card" href="stages/deployment/" data-stage="stages/deployment/">
-    <span class="rm-stage-number">08</span>
-    <span class="rm-stage-body">
-      <span class="rm-stage-title">Docker en deployment</span>
-      <span class="rm-stage-text">Van notebook naar een API in een container die overal hetzelfde draait.</span>
-    </span>
-    <span class="rm-stage-side"><span class="rm-stage-hours">4,5 uur</span><span class="rm-stage-progress">–</span></span>
-  </a>
   <a class="rm-stage-card rm-stage-card--final" href="stages/final-project/" data-stage="stages/final-project/">
-    <span class="rm-stage-number">09</span>
+    <span class="rm-stage-number">08</span>
     <span class="rm-stage-body">
       <span class="rm-stage-title">Eindproject <span class="rm-tag rm-tag--muted">Nog te bepalen</span></span>
       <span class="rm-stage-text">Eén project dat alles samenbrengt, om te laten zien in een interview.</span>
@@ -106,13 +98,13 @@ hide:
 
 <!-- PLACEHOLDER: herschrijf deze sectie in je eigen woorden. -->
 
-Na een sollicitatiegesprek voor een rol als Junior AI Engineer werd duidelijk dat het traineeship veel behandelt van wat zulke rollen vragen (Python, Git, cloud, datapipelines, werken met stakeholders), maar niet de LLM-specifieke onderdelen: RAG, agents, evaluatie en deployment. Deze roadmap zet de beste bronnen daarvoor op één plek, in een logische volgorde, samen met de vragen die interviewers echt stellen.
+Na een sollicitatiegesprek voor een rol als Junior AI Engineer werd duidelijk dat het traineeship veel behandelt van wat zulke rollen vragen (Python, Git, cloud, datapipelines, werken met stakeholders), maar niet de LLM-specifieke onderdelen: RAG, agents en evaluatie. Deze roadmap zet de beste bronnen daarvoor op één plek, in een logische volgorde, samen met de vragen die interviewers echt stellen.
 
 ## Zo gebruik je deze site { #gebruik }
 
 <div class="rm-steps" markdown>
 
-1. **Kies een route.** De *volledige route* behandelt elk onderwerp in ongeveer 35–40 uur. *Opfrissen* laat alleen de essentie zien, ongeveer een halve dag, voor vlak voor een interview.
+1. **Kies een route.** De *volledige route* behandelt elk onderwerp in ongeveer 30–35 uur. *Opfrissen* laat alleen de essentie zien, ongeveer een halve dag, voor vlak voor een interview.
 2. **Werk de fases op volgorde door.** Elke fase laat zien wat je moet leren, oefeningen om mee te oefenen en optionele bronnen om je te verdiepen. Vink items af terwijl je bezig bent.
 3. **Oefen de interviewvragen.** Probeer eerst hardop te antwoorden en klap dan het antwoord open. Markeer elke vraag als *kon ik beantwoorden* of *nog herhalen*, en gebruik het filter om terug te gaan naar de vragen die je lastig vindt.
 

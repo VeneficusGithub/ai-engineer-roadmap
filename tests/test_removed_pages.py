@@ -1,4 +1,6 @@
-"""The setup-and-costs page and the progress export/import section are gone."""
+"""Removed pages and sections: setup and costs, progress export/import, deployment."""
+
+import re
 
 import pytest
 from playwright.sync_api import Page, expect
@@ -36,5 +38,23 @@ def test_home_still_tracks_progress_without_the_section(page: Page) -> None:
     errors: list[str] = []
     page.on("pageerror", lambda error: errors.append(str(error)))
     page.goto("")
-    expect(page.locator("#rm-stages-done")).to_have_text("0 / 9")
+    expect(page.locator("#rm-stages-done")).to_have_text("0 / 8")
     assert errors == []
+
+
+def test_deployment_stage_no_longer_exists(page: Page) -> None:
+    response = page.goto("stages/deployment/")
+    assert response is not None and response.status == 404
+
+
+@pytest.mark.parametrize("path", ALL_PAGES)
+def test_no_page_mentions_docker_or_deployment(page: Page, path: str) -> None:
+    page.goto(path)
+    expect(page.locator('a[href*="stages/deployment"]')).to_have_count(0)
+    text = page.locator(".md-main").text_content() or ""
+    assert not re.search(r"\b(?:Docker|deployment)\b", text, re.IGNORECASE)
+
+
+def test_final_project_is_the_eighth_and_last_stage(page: Page) -> None:
+    page.goto("stages/final-project/")
+    expect(page.locator(".rm-meta")).to_contain_text("Fase 8 van 8")

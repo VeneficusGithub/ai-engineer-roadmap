@@ -8,7 +8,7 @@ description: Laat een LLM in een loop zelf bepalen welke tools het aanroept, tot
 <p class="rm-lede">Met prompting vertel je een model wat het moet zeggen. Met een agent laat je het model bepalen wat het moet <em>doen</em>: het kiest een tool, leest het resultaat en herhaalt dat tot de taak klaar is. Interviewers willen horen dat je het verschil kent, en wanneer een vaste workflow de betere keuze is.</p>
 
 <div class="rm-meta" markdown>
-<span>Fase 2 van 9</span>
+<span>Fase 2 van 8</span>
 <span>Ongeveer 6 uur</span>
 <span>Bouwt voort op: LLM-basiskennis</span>
 </div>

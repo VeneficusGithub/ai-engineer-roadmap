@@ -8,7 +8,7 @@ description: Hoe large language models van buitenaf werken, en hoe je er een aan
 <p class="rm-lede">Voordat je iets bouwt bovenop een LLM, moet je weten wat je aanroept: wat een token is, waarom dezelfde prompt verschillende antwoorden kan geven, hoe je betrouwbaar structured output krijgt en wat een embedding is.</p>
 
 <div class="rm-meta" markdown>
-<span>Fase 1 van 9</span>
+<span>Fase 1 van 8</span>
 <span>Ongeveer 2 uur</span>
 <span>Bouwt voort op: je data science-achtergrond</span>
 </div>

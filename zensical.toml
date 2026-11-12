@@ -13,7 +13,6 @@ nav = [
     "stages/multi-agent.md",
     "stages/evaluation.md",
     "stages/security.md",
-    "stages/deployment.md",
     "stages/final-project.md",
   ] },
 ]

@@ -10,7 +10,6 @@ STAGES = [
     "rag",
     "agents",
     "evaluation",
-    "deployment",
     "security",
     "mcp-skills",
     "multi-agent",

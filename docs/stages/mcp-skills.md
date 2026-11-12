@@ -8,7 +8,7 @@ description: Standaardmanieren om agents tools, data en instructies te geven.
 <p class="rm-lede">MCP is een standaardmanier om tools en databronnen aan elke AI-applicatie te koppelen; skills zijn verpakte instructies die een agent pas laadt als hij ze nodig heeft.</p>
 
 <div class="rm-meta" markdown>
-<span>Fase 3 van 9</span>
+<span>Fase 3 van 8</span>
 <span>Ongeveer 9,5 uur</span>
 <span>Bouwt voort op: agents en tool calling</span>
 </div>

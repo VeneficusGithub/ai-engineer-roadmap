@@ -8,7 +8,7 @@ description: Weet of je LLM-applicatie echt werkt, en zie wat hij in productie d
 <p class="rm-lede">"Het zag er goed uit toen ik het probeerde" is geen evaluatie. Deze fase gaat over het omzetten van kwaliteit in cijfers die je kunt volgen, en over genoeg loggen om achteraf een slecht antwoord te begrijpen.</p>
 
 <div class="rm-meta" markdown>
-<span>Fase 6 van 9</span>
+<span>Fase 6 van 8</span>
 <span>Ongeveer 4,5 uur</span>
 <span>Bouwt voort op: RAG, agents</span>
 </div>
