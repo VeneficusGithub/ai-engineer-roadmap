@@ -9,15 +9,17 @@ description: Hoe large language models van buitenaf werken, en hoe je er een aan
 
 <div class="rm-meta" markdown>
 <span>Fase 1 van 9</span>
-<span>Ongeveer 3 uur</span>
+<span>Ongeveer 2 uur</span>
 <span>Bouwt voort op: je data science-achtergrond</span>
 </div>
+
+!!! curating "Zo kom je aan je API-sleutel"
+    Voor de module van Anthropic in deze fase heb je een API-sleutel nodig. Die krijg je waarschijnlijk via een workspace bij Anthropic, maar die is nog niet ingericht. Zodra dat zo is, lees je hier hoe je aan je sleutel komt.
 
 ## Leren
 
 - [Large Language Models explained briefly](https://www.youtube.com/watch?v=LPZh9BOjkQs){ .rm-item .rm-refresh data-source="Video · 3Blue1Brown" data-time="8 min" } Een korte, visuele uitleg van hoe een LLM het volgende woord voorspelt, en hoe training en transformers daarbij helpen.
-- [Working with the OpenAI API](https://www.datacamp.com/courses/working-with-the-openai-api){ .rm-item data-source="Cursus · DataCamp" data-time="Ongeveer 1 uur 45 min, hoofdstuk 1–2" } Je eerste aanroepen van een LLM-API in Python, stap voor stap. DataCamp levert de API-sleutel zelf, dus je hebt niets extra's nodig.
-- [Understanding Prompt Engineering](https://www.datacamp.com/courses/understanding-prompt-engineering){ .rm-item data-source="Cursus · DataCamp" data-time="1 uur 11 min" } Prompting zonder code: zero-shot, few-shot, chain of thought en rollen.
+- [Building with the Claude API: Getting Started with Claude](https://www.coursera.org/learn/building-with-the-claude-api#modules){ .rm-item data-source="Cursusmodule · Anthropic via Coursera" data-time="Ongeveer 2 uur" } Module 1 van de cursus: je eerste aanroepen van de Claude API in Python, gesprekken over meerdere beurten, system prompts, temperature, streaming en structured output. De cursus is gratis, maar je hebt een API-sleutel nodig; zie de melding bovenaan deze pagina.
 
 ## Interviewvragen
 

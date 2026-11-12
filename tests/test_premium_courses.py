@@ -6,8 +6,10 @@ from playwright.sync_api import Page, expect
 CLAUDE_API = "https://anthropic.skilljar.com/claude-with-the-anthropic-api/"
 TOOL_USE = CLAUDE_API + "287747"
 AGENTS_AND_WORKFLOWS = CLAUDE_API + "287796"
+GETTING_STARTED = "https://www.coursera.org/learn/building-with-the-claude-api#modules"
 
 NEEDS_API_KEY = [
+    ("llm-foundations", GETTING_STARTED),
     ("agents", TOOL_USE),
     ("agents", AGENTS_AND_WORKFLOWS),
     ("mcp-skills", CLAUDE_API + "287780"),
@@ -35,11 +37,20 @@ def test_resource_says_when_it_needs_an_api_key(
     expect(item).to_contain_text("API-sleutel")
 
 
-def test_first_module_says_where_to_learn_to_use_the_key(page: Page) -> None:
-    """The modules are picked from the middle of a course that explains this earlier."""
+def test_first_stage_says_how_to_get_an_api_key(page: Page) -> None:
+    page.goto("stages/llm-foundations/")
+    note = page.locator(".admonition.curating")
+    expect(note.locator(".admonition-title")).to_have_text(
+        "Zo kom je aan je API-sleutel"
+    )
+    expect(note).to_contain_text("workspace")
+    expect(note).to_contain_text("nog niet ingericht")
+
+
+def test_later_module_points_back_to_the_key_note(page: Page) -> None:
     page.goto("stages/agents/")
     item = page.locator("li.rm-li", has=page.locator(f'a[href="{TOOL_USE}"]'))
-    expect(item).to_contain_text("Accessing Claude with the API")
+    expect(item).to_contain_text("in fase 1 lees je hoe je die krijgt")
 
 
 def test_course_modules_are_ticked_off_separately(page: Page) -> None:

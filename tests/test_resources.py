@@ -14,14 +14,14 @@ from playwright.sync_api import Page, expect
 DC = "https://www.datacamp.com/courses/"
 ACADEMY = "https://anthropic.skilljar.com/"
 CLAUDE_API = ACADEMY + "claude-with-the-anthropic-api/"
+GETTING_STARTED = "https://www.coursera.org/learn/building-with-the-claude-api#modules"
 TO_BE_DECIDED = "n.t.b."
 
 EXPECTED: dict[str, dict[str, object]] = {
     "llm-foundations": {
-        "hours": "3 uur",
+        "hours": "2 uur",
         "items": [
-            (DC + "working-with-the-openai-api", False, False),
-            (DC + "understanding-prompt-engineering", False, False),
+            (GETTING_STARTED, False, False),
             ("https://www.youtube.com/watch?v=LPZh9BOjkQs", False, True),
         ],
     },

@@ -32,7 +32,7 @@ hide:
       <span class="rm-stage-title">LLM-basiskennis</span>
       <span class="rm-stage-text">Tokens, prompting, structured output en embeddings: weten wat je eigenlijk aanroept.</span>
     </span>
-    <span class="rm-stage-side"><span class="rm-stage-hours">3 uur</span><span class="rm-stage-progress">–</span></span>
+    <span class="rm-stage-side"><span class="rm-stage-hours">2 uur</span><span class="rm-stage-progress">–</span></span>
   </a>
   <a class="rm-stage-card" href="stages/agents/" data-stage="stages/agents/">
     <span class="rm-stage-number">02</span>
